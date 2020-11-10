@@ -1,0 +1,42 @@
+//Mixins
+@mixin big-shadow {
+  filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.25));
+}
+
+@mixin small-shadow {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+@mixin section-mb {
+  margin-bottom: 190px;
+
+  @media (max-width: 991px) {
+    margin-bottom: 90px;
+  }
+
+  .label {
+    font-size: 13px;
+    font-weight: $bold;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: $primary;
+    margin-bottom: 23px;
+
+    @media (max-width: 991px) {
+      text-align: center;
+    }
+  }
+
+  .title {
+    font-size: 64px;
+    font-weight: $semibold;
+    color: $black;
+    line-height: 75px;
+
+    @media (max-width: 991px) {
+      font-size: 36px;
+      line-height: 42px;
+      text-align: center;
+    }
+  }
+}
